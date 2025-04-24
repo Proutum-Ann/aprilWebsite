@@ -4,3 +4,11 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.character-img {
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    background-position: top;
+    background-color: black;
+}

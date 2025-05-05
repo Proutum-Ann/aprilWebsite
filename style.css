@@ -15,11 +15,6 @@ body {
     font-weight: bold;
 }
 
-.sticky {
-    position: sticky;
-    top: 0
-}
-
 .blurb {
     background: linear-gradient(to bottom, #fff, #d4d4d4);
     box-shadow: 3px 3px 0px #d4d4d4 inset, -3px -3px 0px #b9b9b9 inset;

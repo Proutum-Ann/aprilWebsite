@@ -15,6 +15,11 @@ body {
     font-weight: bold;
 }
 
+.sticky {
+    position: sticky;
+    top: 0
+}
+
 .blurb {
     background: linear-gradient(to bottom, #fff, #d4d4d4);
     box-shadow: 3px 3px 0px #d4d4d4 inset, -3px -3px 0px #b9b9b9 inset;
@@ -51,9 +56,13 @@ section {
     background-color: #fff;
 }
 
-footer {
-    color: #b07322;
-    background-color: #fff;
+footer, nav, .nav-link, .dropdown-item {
+    color: #b07322!important;
+    background-color: #fff!important;
+}
+
+.disabled {
+    opacity: 50%
 }
 
 .footer-link {

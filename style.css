@@ -10,7 +10,7 @@ body {
     max-width: 100px;
 }
 
-.navbar, h1, h3, h4 {
+.navbar, h1, h3, h4, .stat {
     font-family: "optima-lt-pro", sans-serif;
     font-weight: bold;
 }
@@ -53,7 +53,7 @@ footer {
 .footer-link {
     text-decoration: none;
 }
-
+ /* Character Page */
 .info-box, .intro {
     background: linear-gradient(to bottom, #fff, #d4d4d4);
     border-radius: 10px;
@@ -82,10 +82,32 @@ footer {
     color: #fff
 }
 
+/* Classes */
+.chara-classes {
+    max-width: 50px;
+    max-height: 50px
+}
+
+/* Resistance and Weaknesses */
+.res, .weak {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.res {
+    filter: drop-shadow(2px 2px 0px #0095DF) drop-shadow(-2px -2px 0px #0095DF) drop-shadow(-2px 2px 0px #0095DF) drop-shadow(2px -2px 0px #0095DF)
+}
+
+.weak {
+    filter: drop-shadow(2px 2px 0px #FFA900) drop-shadow(-2px -2px 0px #FFA900) drop-shadow(-2px 2px 0px #FFA900) drop-shadow(2px -2px 0px #FFA900)
+}
+
+
 /* Animations ig */
 .discord, .facebook, .x-twitter, .youtube {
     transition: 2s;
-    padding: 0.5%
+    padding: 0.5%;
+    border-radius: 150%
 }
 
 .discord:hover, .facebook:hover, .x-twitter:hover, .youtube:hover {

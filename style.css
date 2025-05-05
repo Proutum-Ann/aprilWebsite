@@ -15,6 +15,12 @@ body {
     font-weight: bold;
 }
 
+.blurb {
+    background: linear-gradient(to bottom, #fff, #d4d4d4);
+    box-shadow: 3px 3px 0px #d4d4d4 inset, -3px -3px 0px #b9b9b9 inset;
+    border-radius: 10px;
+}
+
 .character-img {
     height: 100px;
     width: 100px;
@@ -56,12 +62,6 @@ footer {
  /* Character Page */
 .info-box, .intro {
     background: linear-gradient(to bottom, #fff, #d4d4d4);
-    border-radius: 10px;
-}
-
-.spellcard {
-    background: linear-gradient(to bottom, #fff, #d4d4d4);
-    box-shadow: 3px 3px 0px #d4d4d4 inset, -3px -3px 0px #b9b9b9 inset;
     border-radius: 10px;
 }
 

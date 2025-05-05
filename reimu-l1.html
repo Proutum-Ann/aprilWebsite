@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Touhou Project: Touhou Lost Word</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/zoe6ryh.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="imgs/thlw-logo.png">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link disabled" href="#">Story Cards</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="row mx-5 my-3">
+
+            <div class="col-md-3 info-box p-2 mx-auto text-center">
+                <img class="img-fluid w-100" src="imgs/portraits/reimu(a6).png">
+                <hr>
+                
+                <!-- Game Attributes -->
+                <span class="stat">Class:</span> <img class="chara-classes" src="imgs/classes/DEF_icon.png">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="stat">Weakness: 
+                            <img class="img-fluid weak" src="imgs/elements/Moon-Element.png">
+                            <img class="img-fluid weak" src="imgs/elements/Metal-Element.png">
+                        </p>
+                        <p class="stat">Resistance: 
+                            <img class="img-fluid res" src="imgs/elements/Water-Element.png">
+                            <img class="img-fluid res" src="imgs/elements/Star-Element.png">
+                        </p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <span class="stat">Universe</span> L1<br>
+                        <span class="stat">Temperament:</span> Kaisei<br>
+                        <span class="stat">Ability:</span> Capable of flight<br>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-9">
+                <!-- Introduction Quote-->
+                <div class="intro p-3">
+                    "I'll just introduce myself again. My name's Reimu Hakurei. While officially I'm the Hakurei shrine maiden, people treat me more like a general odd-jobber and call me in to clean up their messes. That's why I'm taking care of you too. But remember: if you don't work, you don't eat! You have to help me out too. I'm counting on you!"
+                </div>
+
+                <div class="cards mt-2 text-center">
+                    <a onClick="popup('on')">
+                        <img src="imgs/spellcards/exp-fs.PNG" class="tooltipster" title="Had to take in-game screenshots pardon the non-base appearance.">
+                    </a>
+
+                    
+                    <img src="imgs/spellcards/exp-sc.PNG" class="tooltipster" title="Had to take in-game screenshots pardon the non-base appearance.">
+
+                    <img src="">
+                </div>
+
+                <div class="d-none spellcard p-2" id="story1">
+                    <div class="row mx-auto justify-content-between">
+                        <h3>Spirit Sign: Fantasy Seal</h3>
+                        <small>Solo</small>
+                        <!-- Bullets -->
+                        <div class="col-md-8">
+                            <table class="text-center">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Element</th>
+                                    <th>Bullet</th>
+                                    <th>Type</th>
+                                    <th>Power</th>
+                                    <th>Amount</th>
+                                    <th>Effects</th>
+                                    <th>Boost</th>
+                                </tr>
+
+                                <tr>
+                                    <td>Divine Homing Ofuda</td>
+                                    <td>Wood</td>
+                                    <td>Ofuda</td>
+                                    <td>Yang</td>
+                                    <td>4.11</td>
+                                    <td>16</td>
+                                    <td>Always hits regardless of Acurracy stat.</td>
+                                    <td class="boost-0">0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Sacred Homing Ofuda</td>
+                                    <td>Wood</td>
+                                    <td>Ofuda</td>
+                                    <td>Yang</td>
+                                    <td>6.58</td>
+                                    <td>4</td>
+                                    <td>Effective against youkai and soul-like presences.</td>
+                                    <td class="boost-1">1</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Experimental Fantasy Bullet</td>
+                                    <td>Sun</td>
+                                    <td>Light</td>
+                                    <td>Yang</td>
+                                    <td>7.68</td>
+                                    <td>4</td>
+                                    <td>Breaks target's Barrier with status: Burn.</td>
+                                    <td class="boost-2">2</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Great Divine Homing Ofuda</td>
+                                    <td>Wood</td>
+                                    <td>Ofuda</td>
+                                    <td>Yang</td>
+                                    <td>7.02</td>
+                                    <td>5</td>
+                                    <td>Effective against youkai and soul-like presences.</td>
+                                    <td class="boost-3">3</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Consecrated Divine Homing Ofuda</td>
+                                    <td>Wood</td>
+                                    <td>Ofuda</td>
+                                    <td>Yang</td>
+                                    <td>7.90</td>
+                                    <td>5</td>
+                                    <td>Effective against youkai and soul-like presences.</td>
+                                    <td class="boost-3">3</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Experimental Sealing Bullet</td>
+                                    <td>Sun</td>
+                                    <td>Light</td>
+                                    <td>Yang</td>
+                                    <td>8.78</td>
+                                    <td>5</td>
+                                    <td>Breaks target's Barrier with status: Burn.</td>
+                                    <td class="boost-3">3</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="col-md-4">
+                            Reimu Hakurei's Spell Card. Reimu's signature bullet hell attack sends a barrage of glowing globes at its target. Its beautiful brilliance seals away youkai before they can even think of resisting. According to Marisa, Reimu uses this attack a lot.
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none spellcard p-2" id="story2">
+                    <div class="row mx-auto justify-content-between">
+                        <h3>Dream Sign: Sealing Circle</h3>
+                        <small>Solo</small>
+                        <!-- Bullets -->
+                        <div class="col-md-8">
+                            <table class="text-center">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Element</th>
+                                    <th>Bullet</th>
+                                    <th>Type</th>
+                                    <th>Power</th>
+                                    <th>Amount</th>
+                                    <th>Effects</th>
+                                    <th>Boost</th>
+                                </tr>
+
+                                <tr>
+                                    <td>Experimental Sealing Circle</td>
+                                    <td>Sun</td>
+                                    <td>Light</td>
+                                    <td>Yang</td>
+                                    <td>4.27</td>
+                                    <td>12</td>
+                                    <td>Effective against youkai and fairies. Damage scales with ATK + 60% of DEF.</td>
+                                    <td class="boost-0">0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Himorogi Barrier</td>
+                                    <td>None</td>
+                                    <td>Light</td>
+                                    <td>Yin</td>
+                                    <td>4.39</td>
+                                    <td>4</td>
+                                    <td>40% chance to apply Yang ATK 1UP buff to self.</td>
+                                    <td class="boost-1">1</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Experimental Great Sealing Circle</td>
+                                    <td>Sun</td>
+                                    <td>Light</td>
+                                    <td>Yang</td>
+                                    <td>4.75</td>
+                                    <td>4</td>
+                                    <td>Effective against youkai and fairies. Always hits regardless of Accuracy stat.</td>
+                                    <td class="boost-2">2</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Experimental Divine Sealing Circle</td>
+                                    <td>Wood</td>
+                                    <td>Ofuda</td>
+                                    <td>Yang</td>
+                                    <td>4.10</td>
+                                    <td>5</td>
+                                    <td>Effective against youkai and fairies. Always hits regardless of Accuracy stat.</td>
+                                    <td class="boost-2">2</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Great Himorogi Barrier</td>
+                                    <td>None</td>
+                                    <td>Light</td>
+                                    <td>Yin</td>
+                                    <td>4.39</td>
+                                    <td>5</td>
+                                    <td>75% chance to apply Yang ATK 1UP buff to self.</td>
+                                    <td class="boost-3">3</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Experimental Consecrated Sealing Circle</td>
+                                    <td>Sun</td>
+                                    <td>Light</td>
+                                    <td>Yang</td>
+                                    <td>4.68</td>
+                                    <td>5</td>
+                                    <td>Effective against youkai and fairies.</td>
+                                    <td class="boost-3">3</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="col-md-4">
+                            Reimu Hakurei's Spell Card. She uses her ofuda to create a barrier that encircles the target before letting loose a barrage of bullets. It's just like Reimu to have a bullet hell attack that youkai would definitely not like.
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none spellcard p-2" id="lastword">
+                    [Nothing here yet...]
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer class="text-center">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            Touhou Project © 2025 Shanghai Alice<br>
+            Touhou LostWord © 2025 NextNinja - Good Smile Company<br>
+
+            <div class="row justify-content-center">
+                <div class="col text-body">
+                    <a class="footer-link"
+                        href="https://www.facebook.com/touhoulwGlobal/">
+                        <img class="discord" src="imgs/socials/discord.png">
+                    </a>
+                    <a class="footer-link" href="https://x.com/touhouLW_Global">
+                        <img class="x-twitter" src="imgs/socials/x.png">
+                    </a>
+                    <a class="footer-link" href="https://www.youtube.com/channel/UC7ENPxIQMV02RsutiiyRoWQ">
+                        <img class="youtube" src="imgs/socials/youtube.png">
+                    </a>
+                    <a class="footer-link" href="https://www.facebook.com/touhoulwGlobal/">
+                        <img class="facebook" src="imgs/socials/facebook.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <audio class="d-none" id="themeSong" controls autoplay loop>
+        <source src="audio/Fantasy Telegnosis (Reimu) - Touhou Lost Word Music Extended.mp3" type="audio/mp3">
+    </audio>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="a6rh.js"></script>
+</body>
+
+</html>

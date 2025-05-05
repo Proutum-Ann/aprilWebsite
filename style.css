@@ -3,10 +3,16 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    font-family: "optima-lt-pro", sans-serif;
 }
 
 .navbar-brand img {
     max-width: 100px;
+}
+
+.navbar, h1, h3 {
+    font-family: "optima-lt-pro", sans-serif;
+    font-weight: bold;
 }
 
 .character-img {
@@ -14,7 +20,17 @@ body {
     width: 100px;
     background-size: cover;
     background-position: top;
-    background: linear-gradient(to bottom, );
+    background: linear-gradient(to bottom, #fff, #fff, #be9af5);
+    border-radius: 7px;
+    box-shadow: 3px 3px 0px #d4d4d4 inset, -3px -3px 0px #624b7c inset;
+}
+
+.character-links{
+    text-decoration: none!important;
+}
+
+section {
+    background-color: #fff;
 }
 
 footer {
@@ -24,6 +40,34 @@ footer {
 
 .footer-link {
     text-decoration: none;
+}
+
+.info-box, .intro {
+    background: linear-gradient(to bottom, #fff, #d4d4d4);
+    border-radius: 10px;
+}
+
+.spellcard {
+    background: linear-gradient(to bottom, #fff, #d4d4d4);
+    box-shadow: 3px 3px 0px #d4d4d4 inset, -3px -3px 0px #b9b9b9 inset;
+    border-radius: 10px;
+}
+
+.boost-0 {
+    background: #adadad;
+}
+
+.boost-1 {
+    background: #fcd509;
+}
+
+.boost-2 {
+    background: #fc900a;
+}
+
+.boost-3 {
+    background: #FF0000;
+    color: #fff
 }
 
 /* Animations ig */

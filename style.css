@@ -23,10 +23,22 @@ body {
     background: linear-gradient(to bottom, #fff, #fff, #be9af5);
     border-radius: 7px;
     box-shadow: 3px 3px 0px #d4d4d4 inset, -3px -3px 0px #624b7c inset;
+    transition: 1s
 }
 
 .character-links{
     text-decoration: none!important;
+    color: #b07322;
+    transition: 1s
+}
+
+.character-links:hover {
+    color: #ffde25;
+}
+
+.character-img:hover {
+    transform: scale(1.1)!important;
+    padding: 1.4%!important
 }
 
 section {

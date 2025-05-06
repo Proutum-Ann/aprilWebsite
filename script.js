@@ -34,5 +34,13 @@ const characters = [
     'Eirin Yagokoro',
     'Kaguya Houraisan',
     'Fujiwara no Mokou',
-    'Aya Shameimaru'
+    'Aya Shameimaru',
+    'Medicine Melancholy',
+    'Yuuka Kazami',
+    'Komachi Onozuka',
+    'Shiki Eiki',
+    'Shizuha Aki',
+    'Minoriko Aki',
+    'Hina Kagiyama',
+    'Nitori Kawashiro'
 ]

@@ -110,7 +110,7 @@ function startGame() {
     //Create the placeholder for the selected Character
     displayedCharacter = selectedCharacter
     //display the updated Character
-    document.getElementById('character').src = `imgs/portraits/L1/${selectedCharacter}.png`
+    document.getElementById('character').src = `imgs/portraits/L1/${displayedCharacter}.png`
 
     //Hide Difficulty Selection and Show Game Area & Difficulty Box
     //Add d-none to difficultySelection div
@@ -121,9 +121,11 @@ function startGame() {
     document.getElementById('game').classList.add('d-block')
 }
 
-function getRandomCharacter(characters) {
+function getRandomCharacter(selectedCharacter) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    const selectedCharacter = characters[randomIndex];
     //Select and return random Character from the filtered list
-    return indexOf(characters[Math.floor(Math.random())]).push
+    return selectedCharacter
 }
 
 function updateDifficultyDisplay() {
@@ -137,7 +139,7 @@ function updateDifficultyDisplay() {
     game.classList.add(begin)
 }
 
-function guessLetter() {
+function guessCharacter() {
     let inputField = document.getElementById('input') //get input field
     let guessedCharacters = inputField.value.toLowerCase() //convert input to lowercase
 
@@ -211,8 +213,8 @@ function wrongGuess() {
     }
 }
 
-function correctGuess(selectedCharacter) {
-    document.getElementById('character').src = `imgs/portraits/L1/${selectedCharacter}.png`
+function correctGuess(displayedCharacter) {
+    document.getElementById('character').src = `imgs/portraits/L1/${displayedCharacter}.png`
 }
 
 function endGame(won) {

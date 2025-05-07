@@ -200,7 +200,7 @@ document.getElementById('letterInput').addEventListener("keydown", (event) => {
     }
 })
 
-function wrongGuess(guessedCharacters) {
+function wrongGuess() {
     //increment # of wrong guesses
     wrongGuesses++
 

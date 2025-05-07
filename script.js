@@ -94,6 +94,13 @@ const characters = [
     'Shion Yorigami'*/
 //Note to self, add more characters later
 
+//New guessing game attempt
+let currentCharcter = ''
+let wrongGuesses = 0
+let maxGuesses = 5
+
+/* old attempt
+
 const guessedCharacters = []
 
 //setting Game Variables
@@ -231,7 +238,7 @@ function endGame(won) {
         document.getElementById('result').classList.add('lost')
     }
 
-}
+} */
 
 /* Currently useless */
 function removeCharacter(){

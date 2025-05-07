@@ -99,6 +99,7 @@ const guessedCharacters = []
 //setting Game Variables
 let selectedCharacter = ''
 let displayedCharacter = ''
+let guessedCharacter = []
 let wrongGuesses = 0
 const maxMistakes = 6
 
@@ -140,7 +141,7 @@ function updateDifficultyDisplay(begin) {
 }
 
 function guessLetter() {
-    let inputField = document.getElementById('letterInput') //get input field
+    let inputField = document.getElementById('input') //get input field
     let guessedCharacters = inputField.value.toLowerCase() //convert input to lowercase
 
     //check if input is a valid letter (a-z)
@@ -174,15 +175,15 @@ function guessLetter() {
 }
 
 
-document.getElementById('letterInput').addEventListener("keydown", (event) => {
-    let guessedCharacters = document.getElementById('letterInput').value.toLowerCase() //convert input to lowercase
+document.getElementById('input').addEventListener("keydown", (event) => {
+    let guessedCharacters = document.getElementById('input').value.toLowerCase() //convert input to lowercase
 
     if (event.key === "Enter") {
         //check if input is a valid letter (a-z)
         if (!guessedCharacters.match(/^[a-z]$/)) {
             alert(`Please enter a valid letter between A-Z!`)
-            document.getElementById('letterInput').value = '' //clear input field
-            document.getElementById('letterInput').innerText = '' //clear input field
+            document.getElementById('input').value = '' //clear input field
+            document.getElementById('input').innerText = '' //clear input field
             return //exit
         }
         //store guessed letter in guessedCharacters array
@@ -194,9 +195,9 @@ document.getElementById('letterInput').addEventListener("keydown", (event) => {
             wrongGuess(guessedCharacters)
         }
 
-        document.getElementById('letterInput').value = '' //clear input field
-        document.getElementById('letterInput').innerText = '' //clear input field
-        document.getElementById('letterInput').focus() //refocus input field for next guess
+        document.getElementById('input').value = '' //clear input field
+        document.getElementById('input').innerText = '' //clear input field
+        document.getElementById('input').focus() //refocus input field for next guess
     }
 })
 
@@ -214,23 +215,12 @@ function wrongGuess() {
 }
 
 function correctGuess(guessedCharacters) {
-    let newDisplayedCharacter = ''
-
-    for (let i = 0; i < selectedCharacter.length; i++) {
-        if (selectedCharacter[i] === guessedCharacters) {
-            newDisplayedCharacter += guessedCharacters
-        } else {
-            newDisplayedCharacter += displayedCharacter[i]
-        }
-    }
-    displayedCharacter = newDisplayedCharacter
-
-    document.getElementById('characterDisplay').textContent = displayedCharacter.split('').join(' ')
+    document.getElementById('character').src = `imgs/portraits/L1/${selectedCharacter}.png`
 }
 
 function endGame(won) {
     document.getElementById('result').classList.remove('win', 'lost')
-    document.getElementById('letterInput').disabled = true
+    document.getElementById('input').disabled = true
 
     if (won === true) {
         document.getElementById('result').classList.remove('d-none')
@@ -276,13 +266,13 @@ function restartGame() {
 
     document.getElementById('result').classList.remove('win', 'lost')
     document.getElementById('result').classList.add('d-none')
-    document.getElementById('letterInput').disabled = false
+    document.getElementById('input').disabled = false
 
     document.getElementById('wrongLetters').textContent = `Wrong Guesses: `
     document.getElementById('shamrock').src = 'imgs/shamrock6.png'
 
-    document.getElementById('letterInput').value = ''
-    document.getElementById('letterInput').innerText = ''
+    document.getElementById('input').value = ''
+    document.getElementById('input').innerText = ''
 
     wrongGuesses = 0
     guessedCharacters = ['']

@@ -38,6 +38,9 @@
     <main class="my-3">
 
         <div class="container-fluid">
+            <div class="alert alert-danger">
+                <b>This game currently is not functional. Try again later (i'm going insane)</b>
+            </div>
             <div id="start" class="col-md-6 mx-auto p-2 blurb text-center">
                 <h1>Character Guessing Game</h1>
                 <p>Welcome to the character guessing game, where you guess the Touhou LostWord character by their silhouette!<br>There will be multiple silhouettes with the same names, as there are alternate versions of each character.</p>
@@ -58,7 +61,7 @@
                 <p id="guesses">5 more guesses!</p>
                 <!-- Input for Guessing -->
                 <div id="character">
-                    <input type="text" id="letterInput" class="form-control d-inline-block w-auto text-center"
+                    <input type="text" id="input" class="form-control d-inline-block w-auto text-center"
                         placeholder="Guess the character!">
                     <button id="guessButton" class="btn border-0" onclick="guessLetter()">Guess</button>
                 </div>

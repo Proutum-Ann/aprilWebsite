@@ -51,9 +51,13 @@ section {
     background-color: #fff;
 }
 
-footer, nav, .nav-link, .dropdown-item {
+footer, nav, .dropdown-item {
     color: #b07322!important;
     background-color: #fff!important;
+}
+
+.nav-link {
+    color: #b07322!important;
 }
 
 .disabled {
@@ -106,6 +110,19 @@ footer, nav, .nav-link, .dropdown-item {
     filter: drop-shadow(2px 2px 0px #FFA900) drop-shadow(-2px -2px 0px #FFA900) drop-shadow(-2px 2px 0px #FFA900) drop-shadow(2px -2px 0px #FFA900)
 }
 
+/* Guessing Game */
+.btn {
+    background: linear-gradient(to bottom, #ffde23, #ffde23, #b07322);
+    box-shadow: 1px 1px 0px #b07322 inset, -1px -1px 0px #8d5711 inset;
+    color: #fff;
+    transition: 1s;
+}
+
+.btn:hover {
+    box-shadow: 1px 1px 0px #fff inset, -1px -1px 0px #fff inset;
+    color: #b07322;
+    transform: scale(1.1) rotate(10deg)
+}
 
 /* Animations ig */
 .discord, .facebook, .x-twitter, .youtube {

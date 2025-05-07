@@ -224,26 +224,17 @@ function endGame(won) {
 
     if (won === true) {
         document.getElementById('result').classList.remove('d-none')
-        document.getElementById('result').textContent = `Congratulations, you guessed the Character correctly!`
+        document.getElementById('result').textContent = `Congratulations, you guessed the character correctly!`
         document.getElementById('result').classList.add('win')
     } else if (won === false) {
         document.getElementById('result').classList.remove('d-none')
-        document.getElementById('result').innerHTML = `Try again next time, the Character was <b>${selectedCharacter}</b>!`
+        document.getElementById('result').innerHTML = `Try again next time, the character was <b>${selectedCharacter}</b>!`
         document.getElementById('result').classList.add('lost')
     }
 
 }
 
-function pointCount(won){
-    if (won === true) {
-        pointAmount++
-        return document.getElementById('points').innerHTML = `<p>So far you have won <b>${pointAmount}</b> times!</p>`
-    } else {
-        return document.getElementById('points').innerHTML = `<p>So far you have won <b>${pointAmount}</b> times!</p>`
-    }
-
-}
-
+/* Currently useless */
 function removeCharacter(){
     guessedCharacters.push(selectedCharacter)
     CharacterList.with([selectedCharacter], '')
@@ -256,12 +247,8 @@ function restartGame() {
     document.getElementById('difficultySelection').classList.remove('d-none')
     //Remove d-none from game & gameArea
     document.getElementById('game').classList.add('d-none')
-    document.getElementById('gameArea').classList.add('d-none')
-    document.getElementById('gameArea2').classList.add('d-none')
     //Add d-block to game & gameArea
     document.getElementById('game').classList.remove('d-block')
-    document.getElementById('gameArea').classList.remove('d-block')
-    document.getElementById('gameArea2').classList.remove('d-block')
     document.getElementById('guessing').classList.remove('d-none')
 
     document.getElementById('result').classList.remove('win', 'lost')

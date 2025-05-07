@@ -99,6 +99,43 @@ let currentCharcter = ''
 let wrongGuesses = 0
 let maxGuesses = 5
 
+function startGame() {
+    currentCharacter = characters[Math.floor(Math.random() * characters.length)];
+    wrongGuesses = 0;
+    document.getElementById('result').classList.add('d-none');
+    document.getElementById('input').value = '';
+    document.getElementById('input').focus();
+
+    //activate actual game
+    document.getElementById('start').classList.add('d-none');
+    document.getElementById('game').classList.remove('d-none');
+    document.getElementById('game').classList.add('d-block');
+    document.getElementById('character').src = `imgs/portraits/L1/${currentCharcter}.png`
+}
+//Checking in inputs
+function guessCharacter() {
+    const userGuess = document.getElementById('input').value.trim();
+    
+    //Checking if blank
+    if (!userGuess) {
+        alert('Please enter a guess!')
+    } else if (!userGuess != currentCharcter.toLowerCase()) {
+        wrongGuesses++
+        maxGuesses--
+    }
+
+    if (userGuess.toLowerCase() === currentCharcter.toLowerCase()) {
+        document.getElementById('input').classList.add('disabled')
+        return document.getElementById('result').innerText = `You got it! The character was ${currentCharcter}!`
+    } else if (maxGuesses === 0) {
+        return document.getElementById('result').innerText = `Sorry, the character was ${currentCharcter}! Maybe you'll get it next time.`
+    }
+
+    document.getElementById('input').value = '';
+    document.getElementById('input').focus();
+}
+
+startGame()
 /* old attempt
 
 const guessedCharacters = []

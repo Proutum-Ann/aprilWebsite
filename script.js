@@ -103,15 +103,12 @@ let guessedCharacter = []
 let wrongGuesses = 0
 const maxMistakes = 6
 
-function startGame(begin) {
+function startGame() {
     
-    selectedCharacter = getRandomCharacter(begin)
-
-    //Update Difficulty Display Div
-    updateDifficultyDisplay(begin)
+    selectedCharacter = getRandomCharacter()
 
     //Create the placeholder for the selected Character
-    displayedCharacter = '_'.repeat(selectedCharacter.length)
+    displayedCharacter = selectedCharacter
     //display the updated Character
     document.getElementById('character').src = `imgs/portraits/L1/${selectedCharacter}.png`
 
@@ -129,11 +126,11 @@ function getRandomCharacter(characters) {
     return indexOf(characters[Math.floor(Math.random())]).push
 }
 
-function updateDifficultyDisplay(begin) {
+function updateDifficultyDisplay() {
     //document.getElementById('game').textContent =
     let game = document.getElementById('game')
     //Remove any present difficulty classes
-    game.classList.remove('easy', 'medium', 'hard')
+    game.classList.remove('start')
     //Set text & apply class dynamically using template literals
     game.textContent = `Difficulty: ${begin.charAt(0).toUpperCase() + begin.slice(1)}`
     //Apply the appropriate css style for chosen difficulty
@@ -214,7 +211,7 @@ function wrongGuess() {
     }
 }
 
-function correctGuess(guessedCharacters) {
+function correctGuess(selectedCharacter) {
     document.getElementById('character').src = `imgs/portraits/L1/${selectedCharacter}.png`
 }
 
@@ -244,7 +241,7 @@ function removeCharacter(){
 function restartGame() {
     //Hide Difficulty Selection and Show Game Area & Difficulty Box
     //Add d-none to difficultySelection div
-    document.getElementById('difficultySelection').classList.remove('d-none')
+    document.getElementById('start').classList.remove('d-none')
     //Remove d-none from game & gameArea
     document.getElementById('game').classList.add('d-none')
     //Add d-block to game & gameArea
@@ -254,9 +251,6 @@ function restartGame() {
     document.getElementById('result').classList.remove('win', 'lost')
     document.getElementById('result').classList.add('d-none')
     document.getElementById('input').disabled = false
-
-    document.getElementById('wrongLetters').textContent = `Wrong Guesses: `
-    document.getElementById('shamrock').src = 'imgs/shamrock6.png'
 
     document.getElementById('input').value = ''
     document.getElementById('input').innerText = ''

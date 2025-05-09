@@ -109,7 +109,6 @@ function startGame() {
     //activate actual game
     document.getElementById('start').classList.add('d-none');
     document.getElementById('game').classList.remove('d-none');
-    document.getElementById('game').classList.add('d-block');
     document.getElementById('character').src = `imgs/portraits/L1/${currentCharcter}.png`
 }
 //Checking in inputs
